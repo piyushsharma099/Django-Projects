@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PROJECTSOPEDIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      .one{
+        background-image: linear-gradient(to right bottom , rgb(255, 255, 255) , rgb(50, 50, 50));
+      }
+      .float-container{
+        {% comment %} border: 3px solid black; {% endcomment %}
+        padding: 94px;
+      }
+      .float-child{
+        width: 20px
+        float:left;
+        padding: 20px;
+        margin: 30px;
+        border: 2px solid black;
+      }
+      .box{
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body class="one">
+    
+    {% comment %} <div class="container-fluid">
+      {% if request.user.is_authenticated %}
+      <p class="text-success">You are Logged In </p>
+      <p class="text-success"> Username : {{ request.user.username }}</p>
+
+      <a class="btn btn-success" href="/logout" role="button">Logout</a>
+      {% else %}
+        <p class="text-danger">User is not Logged In</p>
+      
+      {% endif %}
+    </div> {% endcomment %}
+    
+    <div class="float-container">
+        <!-- Content here -->
+        <h1 align=center>PROJECTSOPEDIA</h1>
+        <div class="float-child">
+          <div class="box" align=center>
+            <a class="btn btn-secondary" href="/display" role="button">View All Projects</a>
+          </div>
+        </div>
+
+        <div class="float-child">
+          <div class="box" align=center>
+            <a class="btn btn-secondary" href="/add" role="button">Add A Project</a>
+          </div>
+        </div>
+
+        <div class="float-child">
+          <div class="box" align=center>
+            <a class="btn btn-secondary" href="/remove" role="button">Remove A Project</a>
+          </div>
+        </div>
+
+        {% comment %} <div align=center>
+        <a class="btn btn-primary" href="/filter" role="button">Filter Project</a> 
+        </div> {% endcomment %}
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

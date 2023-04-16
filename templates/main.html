@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    {% comment %} <link rel="stylesheet" href="styles.css"> {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/658825e15c.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom , rgb(135, 135, 135) , rgb(255, 255, 255) , rgb(135, 135, 135) ,rgb(255, 255, 255) , rgb(135, 135, 135));
+            color: #333;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 60px;
+            width:100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;          
+            
+            background-image: linear-gradient(to right , rgb(0, 0, 0) , rgb(135, 135, 135) , rgb(0, 0, 0));
+        }
+
+        nav:hover {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 60px;
+          background-image: linear-gradient(to right , rgb(0, 0, 0) , rgb(135, 135, 135) , rgb(0, 0, 0));
+       }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            margin-left: 600px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li :hover{
+            background-color: #ffffff;
+            color: #000000;
+            border-color:rgb(0, 0, 0);
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 20px;
+            display: block;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .one {
+            background-color: #000000;
+            border-color:rgb(0, 0, 0);
+            color: #fff;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .one:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color:rgb(0, 0, 0);
+        }
+        
+
+        .heading{
+            margin-left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding-top: 20px;
+        }
+        .footre{
+          width: 100%;
+          {% comment %} margin: 0 auto; {% endcomment %}
+          {% comment %} padding: 20px; {% endcomment %}
+          padding-left:10px;
+          padding-right:10px;
+          padding-top:10px;
+          padding-bottom:3px;
+          text-align: center;
+          background-image: linear-gradient(to right ,rgb(135, 135, 135) , rgb(0, 0, 0),rgb(135, 135, 135));
+          width: 100%;
+          color: white;
+        }
+        i{
+          padding-left:10px;
+          padding-right:10px;
+          padding-top:10px;
+        }
+  
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <nav>
+        <h1 class="heading">PROJECTSOPEDIA</h1>
+      <ul>
+        <li><a href="{% url 'home' %}">Projects</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        {% comment %} <li><a href="#">Services</a></li> {% endcomment %}
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+    
+
+
+    
+     <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item ">
+            <img src="https://news.blr.com/app/uploads/sites/3/2019/10/Team-project.jpg" width="250" height="550" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221123132725/Top-Software-Engineering-Projects-Ideas.png" width="1000" height="600"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <img src="https://www.ntaskmanager.com/wp-content/uploads/2020/02/What-is-a-Project-1-scaled.jpg" width="1000" height="550" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div> 
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+    </div>
+    
+  
+
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+      </div>
+
+      
+      
+    <div class="container">
+      <h1>Welcome to PROJECTSOPEDIA</h1>
+        <p>The website which manages the project of past year college students and gives projects suggestion to juniors who wants to make project.</p>
+        {% comment %} <button class="one" onclick="{% url 'Login' %}">Login</button> {% endcomment %}
+        <a href="{% url 'Login' %}">
+          <button class="one">
+              Login
+          </button>
+      </a>
+    </div>
+
+    <footer>
+      
+      <div class="footre">
+        <p>&copy; 2023 PROJECTSOPEDIA. All rights reserved<br>
+          <div>
+            <i class="fa-brands fa-twitter"></i> 
+            <i class="fa-brands fa-instagram"></i> 
+            {% comment %} <i class="fa-brands fa-whatsapp"></i> {% endcomment %}
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </p>
+      </div>
+    
+    </footer>
+  </body>
+</html>
